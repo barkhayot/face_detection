@@ -9,8 +9,8 @@ cap = cv2.VideoCapture('test.mp4')
 # cap = cv2.VideoCapture('filename.mp4')
 
 while True:
-    # Read the frame
-    _, img = cap.read()
+    # Read The Image and getingg ready for face detection
+     img = cap.read()
 
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -27,7 +27,7 @@ while True:
 
     # Stop if escape key is pressed
     k = cv2.waitKey(30) & 0xff
-    if k==27:
+    if k==27 or k==30:
         break
         
 # Release the VideoCapture object
